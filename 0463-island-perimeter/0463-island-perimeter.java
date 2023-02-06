@@ -5,8 +5,10 @@ class Solution {
             for(int j=0;j<grid[i].length;j++){
                 if(grid[i][j] == 1){
                     perimeter+=4;
-                    if(j>0 && grid[i][j-1] == 1) perimeter -=2;
-                    if(i>0 && grid[i-1][j] == 1) perimeter -=2;
+                    // if(j>0 && grid[i][j-1] == 1) perimeter -=2;
+                    // if(i>0 && grid[i-1][j] == 1) perimeter -=2;
+                    if(j<grid[0].length-1 && grid[i][j+1] == 1) perimeter -=2;
+                    if(i<grid.length-1 && grid[i+1][j] == 1) perimeter -=2;
                 } 
                 
             }
