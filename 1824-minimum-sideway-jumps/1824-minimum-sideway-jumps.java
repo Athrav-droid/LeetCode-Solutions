@@ -3,13 +3,13 @@ class Solution {
     public int minSideJumps(int[] obstacles) {
         // return helperRec(obstacles, 2, 0);
 
-        int[][] dp = new int[4][obstacles.length];
-        for(int row[] : dp) Arrays.fill(row, -1);
-        return helperMem(obstacles, 2, 0, dp);
+        // int[][] dp = new int[4][obstacles.length];
+        // for(int row[] : dp) Arrays.fill(row, -1);
+        // return helperMem(obstacles, 2, 0, dp);
 
         // return helperTab(obstacles);
 
-        // return helperSO(obstacles);
+        return helperSO(obstacles);
     }
     
     // RECURSIVE APPROACH
