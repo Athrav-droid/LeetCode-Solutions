@@ -3,13 +3,13 @@ class Solution {
     public int numRollsToTarget(int n, int k, int target) {
         // return helperRec(n, k, target);
 
-        // int[][] dp = new int[n + 1][target + 1];
-        // for(int[] row : dp) Arrays.fill(row, -1);
-        // return helperMem(n, k, target, dp);
+        int[][] dp = new int[n + 1][target + 1];
+        for(int[] row : dp) Arrays.fill(row, -1);
+        return helperMem(n, k, target, dp);
 
         // return helperTab(n, k, target);
 
-        return helperSO(n, k, target);
+        // return helperSO(n, k, target);
     }
 
     //RECURSION APPROACH
