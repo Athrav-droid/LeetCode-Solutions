@@ -18,9 +18,9 @@ class Solution {
         // int fromOne = helperMem(slices, 1, n - 1, n / 3, dp1);
         // return Math.max(fromZero, fromOne);
 
-        return helperTab(slices);
+        // return helperTab(slices);
 
-        // return helperSO(slices);
+        return helperSO(slices);
     }
 
     public int helperRec(int[] slices, int start, int end, int slice){
@@ -82,7 +82,7 @@ class Solution {
                 prev1[slice] = Math.max(take, notTake);
             }
             next1 = curr1;
-            curr1 = prev1;
+            curr1 = prev1.clone();
         }
         int case1 = curr1[n/3];
 
@@ -93,7 +93,7 @@ class Solution {
                 prev2[slice] = Math.max(take, notTake);
             }
             next2 = curr2;
-            curr2 = prev2;
+            curr2 = prev2.clone();
         }
         int case2 = curr2[n/3];
         
