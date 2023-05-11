@@ -6,9 +6,9 @@ class Solution {
         // for(int[] row : dp) Arrays.fill(row, -1);
         // return helperMem(nums1, nums2, 0, 0, dp);
 
-        return helperTab(nums1, nums2);
+        // return helperTab(nums1, nums2);
 
-        // return helperSO(nums1, nums2);
+        return helperSO(nums1, nums2);
     }
 
     public int helperRec(int[] nums1, int[] nums2, int m, int n){
@@ -49,7 +49,7 @@ class Solution {
                 else ans = Math.max(next[n], curr[n + 1]);
                 curr[n] = ans;
             }
-            next = curr;
+            next = curr.clone();
         }
         return next[0];
     }
