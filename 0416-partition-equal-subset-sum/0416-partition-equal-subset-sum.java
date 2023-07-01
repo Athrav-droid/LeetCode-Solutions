@@ -6,13 +6,13 @@ class Solution {
 
         // return helper(nums, 0, target);
 
-        Boolean[][] dp = new Boolean[nums.length + 1][total + 1];
-        for(Boolean[] row : dp) Arrays.fill(row, null);
-        return helperMem(nums, 0, target, dp);
+        // Boolean[][] dp = new Boolean[nums.length + 1][total + 1];
+        // for(Boolean[] row : dp) Arrays.fill(row, null);
+        // return helperMem(nums, 0, target, dp);
 
         // return helperTab(nums, total);
 
-        // return helperSO(nums, total);
+        return helperSO(nums, total);
     }
 
     public boolean helper(int[] nums, int index, int target){
@@ -79,7 +79,7 @@ class Solution {
 
                 curr[target] = (inc || exc);
             }
-            next = curr;
+            next = curr.clone();
         }
         return next[total / 2];
     }    
