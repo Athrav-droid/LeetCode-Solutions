@@ -2,13 +2,13 @@ class Solution {
     public int maxProfit(int[] prices) {
         // return helper(prices, 0, 1, 2);
 
-        // int[][][] dp = new int[prices.length + 1][2][3];
-        // for(int[][] row : dp) for(int[] col : row) Arrays.fill(col, -1);
-        // return helperMem(prices, 0, 1, 2, dp);
+        int[][][] dp = new int[prices.length + 1][2][3];
+        for(int[][] row : dp) for(int[] col : row) Arrays.fill(col, -1);
+        return helperMem(prices, 0, 1, 2, dp);
 
         // return helperTab(prices);
 
-        return helperSO(prices);
+        // return helperSO(prices);
     }
 
     public int helper(int[] prices, int index, int buy, int limit){
