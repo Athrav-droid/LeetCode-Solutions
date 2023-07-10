@@ -10,7 +10,7 @@ class Solution {
                 nums[j] -= curr;
             }
         }
-        for(int i = 0; i < n; i++){
+        for(int i = n - k; i < n; i++){
             if(nums[i] != 0) return false;
         }
         return true;
